@@ -1,0 +1,74 @@
+body {
+    background-color: #7599ed;
+}
+
+h1 {
+    color: yellow;
+
+}
+
+h5 {
+    color: #dbc904;
+}
+
+
+.nav-item .nav-link {
+    color: #c9df4a;
+}
+
+.helper>a {
+    color: yellow;
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+.footer-text>p {
+    color: yellow;
+}
+
+.call-anim {
+    animation: myAnim 2s ease 0s infinite normal forwards;
+}
+
+@keyframes myAnim {
+	0%,
+	100% {
+		transform: translateX(0%);
+		transform-origin: 50% 50%;
+	}
+
+	15% {
+		transform: translateX(-30px) rotate(-6deg);
+	}
+
+	30% {
+		transform: translateX(15px) rotate(6deg);
+	}
+
+	45% {
+		transform: translateX(-15px) rotate(-3.6deg);
+	}
+
+	60% {
+		transform: translateX(9px) rotate(2.4deg);
+	}
+
+	75% {
+		transform: translateX(-6px) rotate(-1.2deg);
+	}
+}
+
+.name>h1 {
+    margin-top: 1em;
+    margin-bottom: 0.7em;
+
+}
+
+.project>h3 {
+    color: red;
+    margin-top: 2em;
+}
+
+.container_fluid {
+    margin-top: 4em;
+}

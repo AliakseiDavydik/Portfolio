@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_content %}
+<div class="name text-center">
+    <h1>{{ info_project.name }}</h1>
+</div>
+<div class="row">
+    <div class="col-md-8">
+        <img src="{% static info_project.image %}" alt="" width="90%">
+    </div>
+    <div class="col-md-4">
+        <h5>About project:</h5>
+        <p>{{ info_project.short_description }}</p>
+        <br>
+        <h5>Technology:</h5>
+        <p>{{ info_project.technology }}</p>
+        <div class="project">
+            <h3>Link to my Github:</h3>
+            <a class="btn btn-primary" href="https://github.com/AliakseiDavydik" role="button">GitHub</a>
+        </div>
+
+    </div>
+
+</div>
+
+
+    <footer class="mt-4">
+        <div class="container_fluid">
+            <div class="row">
+                <div class="col-lg-2 col-md-12 footer-text">
+                    <p>Aliaksei Davydick</p>
+                </div>
+                <div class="col-lg-8 col-md-12 media-links text-center">
+                    <img style="width: 40px; margin-inline: 1em;" src="{% static 'files/python.png' %}" alt="">
+                    <img style="width: 50px; margin-inline: 1em;" src="{% static 'files/django.png' %}" alt="">
+                    <img style="width: 60px; margin-inline: 1em;" src="{% static 'files/html.png' %}" alt="">
+                </div>
+                <div class="col-lg-2 col-md-12 footer-text text-center">
+                    <p>All rights Reserved 2023</p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+{% endblock %}
+
+
+

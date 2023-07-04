@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <title>Resume</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="icon" type="image/x-icon" href="#"/>
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet"
+          type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css"/>
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link rel="stylesheet" href="{% static 'css/style_me.css' %}">
+</head>
+<body id="page-top">
+{% block page_content %}
+{% for info in user_info %}
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/"><img src="#" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link "><h5>Personal Portfolio</h5></a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'project_index' %}">Main</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'index_me' %}">About me</a>
+                </li>
+
+
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <span class="d-block d-lg-none">{{ info.name }}</span>
+        <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="#"
+                                             alt="My Photo"/></span>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
+            class="navbar-toggler-icon"></span></button>
+
+    <br>
+    <br>
+    <br>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'project_index' %}">Main</a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Work preferences</a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contacts">Contacts</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Page Content-->
+<div class="container-fluid p-0">
+    <!-- About-->
+    <section class="resume-section" id="about">
+        <div class="resume-section-content">
+            <h1 class="mb-0">
+                Aliaksei
+                <span class="text-primary">Davydick</span>
+            </h1>
+            <div class="subheading mb-5">
+                Republic of Belarus, Minsk · {{ info.telephone }} · {{ info.email }} · {{ info.age }}
+                <a href="mailto:name@email.com"></a>
+            </div>
+            <p class="lead mb-5">{{ info.intro }}</p>
+            <div class="social-icons">
+                <a class="social-icon" href="https://www.linkedin.com/in/aliaksei-davydick"><i class="fab fa-linkedin-in"></i></a>
+                <a class="social-icon" href="https://github.com/AliakseiDavydik"><i class="fab fa-github"></i></a>
+
+
+
+            </div>
+        </div>
+    </section>
+    <hr class="m-0"/>
+    <!-- Experience-->
+
+    <section class="resume-section" id="experience">
+
+        <div class="resume-section-content">
+            <h2 class="mb-5">Experience</h2>
+
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+
+                    <h3 class="mb-0">Operations Inspector</h3>
+                    <div class="subheading mb-3">State Control Committee of the Republic of Belarus Department of
+                        Financial Investigations
+                    </div>
+                    <p>Prevention, suppression and disclosure of crimes in the sphere of economic activity</p>
+                </div>
+                <div class="flex-shrink-0"><span class="text-primary">July 2017 - December 2019</span></div>
+            </div>
+
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0">Picker</h3>
+                    <div class="subheading mb-3">OOO "Vitro Group"</div>
+                    <p>Work with medical supplie</p>
+                </div>
+                <div class="flex-shrink-0"><span class="text-primary">March 2020 - May 2023</span></div>
+            </div>
+        </div>
+
+    </section>
+
+    <hr class="m-0"/>
+    <!-- Education-->
+    <section class="resume-section" id="education">
+        <div class="resume-section-content">
+            <h2 class="mb-5">Education</h2>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0">Academy of the Ministry of Internal Affairs of the Republic of Belarus</h3>
+                    <div class="subheading mb-3">Lawyer with knowledge of economics</div>
+                    <div>Economic Law</div>
+                </div>
+                <div class="flex-shrink-0"><span class="text-primary">July 2012 - July 2017</span></div>
+            </div>
+            <div class="d-flex flex-column flex-md-row justify-content-between">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0">IT OverOne programming school</h3>
+                    <div class="subheading mb-3">Python developer</div>
+
+                </div>
+                <div class="flex-shrink-0"><span class="text-primary">September 2022 - February 2023</span></div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="m-0"/>
+    <!-- Skills-->
+    <section class="resume-section" id="skills">
+        <div class="resume-section-content">
+            <h2 class="mb-5">Hard Skills</h2>
+            <div class="subheading mb-3">Programming Languages & Tools</div>
+            <ul class="list-inline dev-icons">
+                <li class="list-inline-item"><i class="fab fa-html5"></i></li>
+                <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
+                <li class="list-inline-item"><i class="fab fa-python"></i></li>
+                <li class="list-inline-item"><i class="fab fa-github"></i></li>
+                <li class="list-inline-item"><i class="fab fa-git"></i></li>
+                <li class="list-inline-item"><i class="devicon-django-plain"></i></li>
+                <li class="list-inline-item"><i class="devicon-selenium-original"></i></li>
+                <li class="list-inline-item"><i class="devicon-fastapi-plain"></i></li>
+                <li class="list-inline-item"><i class="devicon-pytest-plain"></i></li>
+                <li class="list-inline-item"><i class="devicon-vscode-plain"></i></li>
+                <li class="list-inline-item"><i class="devicon-sqlite-plain"></i></li>
+            </ul>
+            <div class="subheading mb-3">Hard skills</div>
+            <ul class="fa-ul mb-0">
+                <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span>
+                    Python
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span>
+                    Django
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span>
+                    ООП, DRY, KISS, SOLID, REST
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span>
+                    Git
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span>
+                    MySql
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span>
+                    Опыт работы с Docker
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span>
+                    HTML, CSS
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span>
+                    ASYNCIO
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span>
+                    Опыт работы с Numpy, Pandas, Matplotlib
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span>
+                    English language - B1
+                </li>
+            </ul>
+        </div>
+    </section>
+    <hr class="m-0"/>
+    <!-- Interests-->
+    <section class="resume-section" id="interests">
+        <div class="resume-section-content">
+            <h2 class="mb-5">Work preferences</h2>
+            <p>{{ info.preferences }}</p>
+            <p class="mb-0">Have a good day!</p>
+        </div>
+    </section>
+    <hr class="m-0"/>
+    <!-- Awards-->
+    <section class="resume-section" id="awards">
+        <div class="resume-section-content">
+            <h2 class="mb-5">Awards & Certifications</h2>
+            <ul class="fa-ul mb-0">
+                <li>
+                    <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                    {{ info.certifications }}
+                </li>
+
+            </ul>
+        </div>
+    </section>
+    <hr class="m-0"/>
+    <!-- Contacts-->
+        <section class="resume-section" id="contacts">
+            <div class="resume-section-content">
+                <h2 class="mb-5">Contacts</h2>
+                <ul class="fa-ul mb-0">
+                    <li>
+                        <div class="ico-wrap">
+                            <i class="fa fa-envelope ico-contact"></i>
+                        </div>
+                        <div class="meanous-andscoev">
+                            <h4 class="aio-icon-title">Email address:</h4>
+                        </div>
+                        <div class="aio-icon-description">
+                            <p>{{ info.email }}</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="ico-wrap">
+                            <i class="fa fa-envelope ico-contact"></i>
+                        </div>
+                        <div class="meanous-andscoev">
+                            <h4 class="aio-icon-title">Communication by phone:</h4>
+                        </div>
+                        <div class="aio-icon-description">
+                           <p>{{ info.telephone }}</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <hr class="m-0"/>
+
+
+
+        </div>
+    {% endfor %}
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="{% static 'js/scripts.js' %}"></script>
+{% endblock %}
+</body>
+</html>
